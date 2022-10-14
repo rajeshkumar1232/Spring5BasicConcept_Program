@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean id="accBeans" class="com.java.beans.Account" 
+		c:accNo="C-11" 
+		c:accName="Pnamespace"
+		c:accType="PSaving"
+		c:bal="50000"/>
+<!-- 		<bean id="accBeans" class="com.java.beans.Account" >
+			<constructor-arg name="accNo" value="E-11"/> 
+			<constructor-arg  name="accName" value="xyz"/>
+			<constructor-arg  name="accType" value="saving"/>
+			<constructor-arg  name="bal" value="50000"/> 
+			</bean> -->
+
+		
+		<bean id="empBeans" class="com.java.beans.Employee"
+		c:eid ="C-111"
+		c:eName="Cnamespaceexample"
+		c:esal="30000"
+		c:eAddr="PAPAC"
+		c:acc-ref="accBeans"/>
+<!-- 		<bean id="empBeans" class="com.java.beans.Employee">	
+			<constructor-arg  name="eid" value="E-1122"/>
+			<constructor-arg  name="eName" value="abc"/>
+			<constructor-arg  name="esal" value="40000"/>
+			<constructor-arg  name="eAddr" value="Apac"/>
+			<constructor-arg  name="acc" ref="accBeans"/> 
+			</bean> -->
+		
+</beans>
