@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean id="accBeans" class="com.java.beans.Account" 
+		p:accNo="E-11" 
+		p:accName="namespace"
+		p:accType="Saving"
+		p:bal="50000"/>
+<!-- 			<property name="accNo" value="E-11"/>
+			<property name="accName" value="xyz"/>
+			<property name="accType" value="saving"/>
+			<property name="bal" value="50000"/> -->
+
+		
+		<bean id="empBeans" class="com.java.beans.Employee"
+		p:eid ="N-111"
+		p:eName="namespaceexample"
+		p:esal="30000"
+		p:eAddr="APAC"
+		p:acc-ref="accBeans"/>
+<!-- 			<property name="eid" value="E-1122"/>
+			<property name="eName" value="abc"/>
+			<property name="esal" value="40000"/>
+			<property name="eAddr" value="Apac"/>
+			<property name="acc" ref="accBeans"/> -->
+		
+</beans>
