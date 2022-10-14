@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="savingAccount" class="com.java.beans.SavingAccount" />
+	<bean id="currentAccount" class="com.java.beans.CurrentAccount" />
+
+	<bean id="savingAccountFactory"
+		class="com.java.factory.AccountFactory">
+		<lookup-method name="getAccount" bean="savingAccount" />
+	</bean>
+	<bean id="currentAccountFactory"
+		class="com.java.factory.AccountFactory">
+		<lookup-method name="getAccount" bean="currentAccount" />
+	</bean>
+
+	<!-- since abstract class will not create object instead it will create 
+		sub class for saving and current class -->
+</beans>
