@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="acc" class="com.java.beans.Account" init-method="init">
+		<property name="accNo" value="123456"/>
+		<property name="accHolderName" value="xyz"/>
+		<!-- <property name="accType" value="saving"/> -->
+		<property name="balance" value="50000"/>
+		<property name="accHolderEmail" value="testmail"/>
+		<property name="accHolderMobileNo" value="1234567890"/>
+	</bean>
+	<bean id="postprocess" class="com.java.processor.AccoutPostProcessor">
+	</bean>
+
+
+</beans>
