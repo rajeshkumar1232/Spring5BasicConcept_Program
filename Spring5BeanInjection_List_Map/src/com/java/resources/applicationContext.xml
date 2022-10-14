@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="addrBean" class="com.java.beans.Address">
+		<property name="houseNo" value="011"/>
+		<property name="street" value="Street-9"/>
+		<property name="city" value="CITY"/>
+		<property name="state" value="State"/>
+		<property name="country" value="APAC"/>
+	</bean>
+	
+    <bean id="stuBean" class="com.java.beans.Student">
+        <property name="sid" value="S-222"/>
+        <property name="sName" value="XYZ"/>
+        <property name="addr" ref="addrBean"/>
+        <property name="sqalification">
+        	<list>
+        		<value>Bachlore</value>
+        		<value>Master</value>
+        	</list>
+        </property>
+        <property name="scourses">
+        	<set>
+        		<value>c</value>
+        		<value>c++</value>
+        		<value>java</value>
+        		<value>python</value>
+        	</set>
+        </property>
+        <property name="courseAndFaculty">
+        	<map>
+        		<entry key="c" value="abc"/>
+        		<entry key="java" value="xyz"/>
+        		<entry key="python" value="pqr"/>
+        	</map>
+        </property>
+        <property name="courseAndCost">
+        	<props>
+        		<prop key="c"> 1000</prop>
+        		<prop key="C++">2000</prop>
+        		<prop key="java">5000</prop>
+        		<prop key="python">8000</prop>
+        	</props>
+        </property>
+    </bean>
+
+
+</beans>
