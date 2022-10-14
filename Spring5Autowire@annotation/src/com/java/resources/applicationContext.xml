@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" 
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+	<context:annotation-config/>
+	<bean id="savingAccout" class="com.java.beans.Account">
+		<property name="accNo" value="AS-001"/>
+		<property name="accHolderName" value="Sxyz"/>
+		<property name="accType" value="Ssaving"/>
+		<property name="bal" value="50000"/>
+	</bean>
+		<bean id="currentAccout" class="com.java.beans.Account">
+		<property name="accNo" value="AC-001"/>
+		<property name="accHolderName" value="Cxyz"/>
+		<property name="accType" value="Csaving"/>
+		<property name="bal" value="50000"/>
+	</bean>
+
+	<bean id="emp" class="com.java.beans.Employee">
+		<property name="eid" value="E-001"/>
+		<property name="eName" value="abc"/>
+		<property name="eSal" value="40000"/>
+		<property name="eAddr" value="blr"/>
+		<!-- <property name="acc" ref="accout"/> -->
+		
+	</bean>
+</beans>
+
