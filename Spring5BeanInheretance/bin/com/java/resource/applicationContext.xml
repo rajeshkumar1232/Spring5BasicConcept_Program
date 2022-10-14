@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!--re using the property name -->
+        <bean id="wisBean" abstract="true">
+<!--         <bean id="wisBean" class="con.java.beans.WishBean"> -->
+        	<property name="name" value="wishBean" />
+        	<property name="message" value=" This is Wish Bean" />
+        </bean>
+        
+        <bean id="hellobean" class="com.java.beans.HelloBean" parent="wisBean">
+        	<!-- <property name="name" value=" helloBean" /> -->
+        	<property name="message" value=" this is hello bean" />
+        </bean>
+        
+        <bean id="welcomeBean" class="com.java.beans.WelcomeBean" parent="wisBean">
+     <!--    	<property name="name" value=" welcomeBean" /> -->
+        	<property name="message" value="this is welcome bean" />
+        </bean>
+        
+ </beans>
