@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userBean" class="com.java.beans.User">
+<!--  		<property name="username" value="xyz"/>
+		<property name="password" value="password"/>
+		<property name="age" value="32"/>
+		<property name="email" value="xyz@gmail.com"/>
+		<property name="mobile" value="91-1234567890"/>  -->
+		<property name="username" value="abc"/>
+		<property name="password" value="1"/>
+		<property name="age" value="14"/>
+		<property name="email" value="xyzdfasdfas"/>
+		<property name="mobile" value=""/>
+    </bean>
+	<bean id="userValidatorBean" class="com.java.validators.UserValidator">
+		<property name="reso" value="/com/java/resources/ErrorMessage.properties"/>
+	</bean>
+</beans>
