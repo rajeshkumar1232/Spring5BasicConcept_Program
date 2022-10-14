@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--     <bean id="acc" class="com.java.beans.Account"> byName-->
+	<bean id="account" class="com.java.beans.Account"> 
+        <property name="accNo" value="E-111"/>
+        <property name="accHolderName" value="XYZ"/>
+        <property name="accType" value="Salary"/>
+        <property name="bal" value="50000"/>
+    </bean>
+<!--     account2 if you dont want to inclue in autowiring then autowire-Canditade attrbute will come to role 
+    	<bean id="account2" class="com.java.beans.Account" autowire-candidate="false"> 
+        <property name="accNo" value="X-111"/>
+        <property name="accHolderName" value="XXXXX"/>
+        <property name="accType" value="Test"/>
+        <property name="bal" value="0000"/>
+    </bean> -->
+    
+<!--     <bean id="addr" class="com.java.beans.Address"> ByName-->
+	<bean id="address" class="com.java.beans.Address">
+    	<property name="houseNo" value="011"/>
+    	<property name="street" value="street"/>
+    	<property name="state" value="state"/>
+    </bean>
+	
+<!-- 	<bean id="emp" class="com.java.beans.Employee" autowire="byName"> byName-->
+<!-- 	<bean id="emp" class="com.java.beans.Employee" autowire="byType"> 
+			<property name="empId" value="E-222"/>
+			<property name="empName" value="xyz"/>
+			<property name="esal" value="30000"/>
+	 		<property name="acc" ref="account"/>
+			<property name="addr" ref="address"/> 
+		</bean>-->
+		<bean id="emp" class="com.java.beans.Employee" autowire="constructor">
+			<constructor-arg name="empId" value="E-222"/>
+			<constructor-arg name="empName" value="xyz"/>
+			<constructor-arg name="esal" value="30000"/>
+	</bean>
+
+
+</beans>
