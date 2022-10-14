@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="employee" class="com.java.beans.Employee">
+        <property name="eid" value="111"/>
+        <property name="name" value="aaaA"/>
+        <property name="salary" value="100000"/>
+        <property name="addr" value="urban-APAC"/>
+    </bean>
+	<bean id ="customConfigurerEditor" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="com.java.beans.Address" value="com.java.editor.EmployeeAddressEditor"></entry>
+			</map>
+		</property>
+	</bean>
+</beans>
